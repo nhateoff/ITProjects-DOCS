@@ -3,6 +3,19 @@
 # README-File
 TEST zur Erstellung einer README.md Datei in GitHub
 
+# Was ist ein README-File und was ist der Zweck davon?
+Ein  README-File ist die **Einführungs- und Anleitungsdatei** eines Projekts, welches meist mit diesem Dateinamen versehen wird `README.md`
+Es erklärt kurz und verständlich um was es in einem Projekt geht, wie es installiert, gestartet und benutzt wird, sowie im Falle von Unklarheiten wo man Hilfeleistungen und weitere Infos findet. Auf GitHub wird es üblicherweise automatisch auf der Startseite des Repos angezeigt.
+
+**Kurz zusammengefasst: Zweck eines README-Files**
+- Orientierung: Was ist das für ein Projekt? Was ist das Ziel davon?
+- Projekteinstieg: Was muss gemacht werden um es zu verwenden (usage)
+- Erleicherung von Zusammenarbeit: Beantwortung von Fragen wie z.B., wie kann ich es testen? auf was muss ich mich achten? Wo erhalte ich Support?
+
+Um das ganze README-File etwas funktionaler und ansprechender zu gestallten gibt es diverse Funktionen im Markdown (.md). Diese werden mit relativ simplen Zeichenkombinationen ausgeführt. Dazu mehr unter dem  Abschnitt "**Formatierungen im Markdown**".
+
+# Formatierungen im Markdown
+
 ## Überschriften
 
 ```md
