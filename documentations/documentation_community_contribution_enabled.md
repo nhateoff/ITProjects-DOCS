@@ -87,3 +87,6 @@ Das Team prüft die Beiträge und übernimmt sinnvolle Änderungen.
 - die Qualität muss gesichert werden
 
 Darum braucht es klare Prozesse und Richtlinien.
+
+Owner: Filip Jurcevic
+Last reviewed: 19.03.2026
