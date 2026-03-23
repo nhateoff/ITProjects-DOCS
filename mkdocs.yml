@@ -2,5 +2,5 @@ site_name: Demo Dokumentation
 theme:
   name: mkdocs
 nav:
-  - Home: index.md
-  - Example: example1.md
+  - Home: index.html
+  - Example: example1.html
