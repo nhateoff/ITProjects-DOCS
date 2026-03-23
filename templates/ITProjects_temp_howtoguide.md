@@ -1,29 +1,17 @@
-# How-to: <Kurzbeschreibung>
+# Template: Step by Step Anleitung erstellen
 
 ## Purpose
 Was löst diese Anleitung? Welches Ergebnis soll erreicht werden?
-
-## Audience
-Für wen ist das gedacht? (User / Dev / Ops)
-
-## Prerequisites
-- Voraussetzung 1
-- Voraussetzung 2
-- Link zu Setup/Installation
 
 ## Steps
 1. Schritt 1
 2. Schritt 2
 3. Schritt 3
 
-## Verify
-Woran erkenne ich, dass es funktioniert? (Output, Status, Logs)
-
-## Troubleshooting
-- Symptom → Ursache → Lösung
-- Häufiger Fehler → Fix
+Falls notwendig: Zu jedem Schritt ein passendes Bild einfügen.
 
 ## Related
+Verlinkungen zu bestehenden Wikis machen.
 - [Verwandte Seite](Link)
 - [Weitere Infos](Link)
 
