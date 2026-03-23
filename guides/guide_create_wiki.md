@@ -30,3 +30,6 @@ Hier ist der Edit-Mode **"Markdown"** empfehlenswert. Dies da Markdown noch benu
 **Nun hast du es geschafft! Deine erste Wiki-Page.**
 
 ![Alt-Text](assets/scr-result.png)
+
+Owner: @nhateoff
+Last reviewed: 23.03.2026
