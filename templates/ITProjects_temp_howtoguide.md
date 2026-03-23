@@ -4,8 +4,8 @@
 Was löst diese Anleitung? Welches Ergebnis soll erreicht werden?
 
 ## Formalities
-Speichere unter: /guides/
-File-name: guide_[thema]
+- Speichere unter: /guides/
+- File-name: guide_[thema]
 
 ## Steps
 1. Schritt 1
