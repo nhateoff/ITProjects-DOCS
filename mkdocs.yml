@@ -23,7 +23,7 @@ markdown_extensions:
   - tables
 
 nav:
-  - Home: index.md
+  - Home: index.html
 
   - Guides:
       - Create GitHub Wiki (Step-by-step): guides/guide_create_wiki.md
