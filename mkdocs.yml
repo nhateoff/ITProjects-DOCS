@@ -1,6 +1,39 @@
-site_name: Demo Dokumentation
+site_name: ITProjects-DOCS
+site_description: Centralized documentation repository for IT projects (guides, concepts, templates)
+site_author: nhateoff
+
+# Where your markdown lives
+docs_dir: docs
+
+# Helpful repo links
+repo_name: nhateoff/ITProjects-DOCS
+repo_url: https://github.com/nhateoff/ITProjects-DOCS
+edit_uri: edit/main/docs/
+
 theme:
   name: mkdocs
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - tables
+
 nav:
-  - Home: index.html
-  - Example: example1.html
+  - Home: index.md
+
+  - Guides:
+      - Create GitHub Wiki (Step-by-step): guides/guide_create_wiki.md
+
+  - Concepts:
+      - Wiki Pages (GitHub): concepts/wiki-pages.md
+      - Centralized Repository: concepts/centralized-repository.md
+      - Searchable Documentation: concepts/searchable-documentation.md
+
+  # Optional: keep your existing HTML demo pages accessible
+  - Web Demos (Optional):
+      - Demo Home (HTML): index.html
+      - Demo Example (HTML): example1.html
