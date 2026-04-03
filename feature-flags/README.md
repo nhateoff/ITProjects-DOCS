@@ -4,7 +4,7 @@ Dieses README definiert **nur die Regeln**, damit Feature Flags sauber bleiben: 
 
 ---
 
-## Regeln (kurz & verbindlich)
+## Regeln
 
 ### 1) Naming (Pflicht)
 **Key-Format:** `<domain>.<area>.<feature>.<variant?>`  
