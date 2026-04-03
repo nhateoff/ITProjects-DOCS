@@ -12,7 +12,7 @@ Zentrale Dokumentationsbasis für IT-Themen (**Guides & Concepts**) – mit Foku
 
 ### Concepts
 - [Wiki Pages (GitHub)](concepts/wiki-pages.md)
-- [Centralized Repository](concepts/centralized-repository.md)
+- [Centralized Repository](concepts/centralized-repo.md)
 - [Searchable Documentation](concepts/searchable-documentation.md)
 
 ---
