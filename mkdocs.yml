@@ -26,12 +26,12 @@ nav:
   - Home: index.md
 
   - Guides:
-      - Create GitHub Wiki (Step-by-step): guides/guide_create_wiki.md
+      - Create GitHub Wiki (Step-by-step): docs/guides/guide_create_wiki.md
 
   - Concepts:
-      - Wiki Pages (GitHub): concepts/wiki-pages.md
-      - Centralized Repository: concepts/centralized-repository.md
-      - Searchable Documentation: concepts/searchable-documentation.md
+      - Wiki Pages (GitHub): docs/concepts/wiki-pages.md
+      - Centralized Repository: docs/concepts/centralized-repository.md
+      - Searchable Documentation: docs/concepts/searchable-documentation.md
 
   # Optional: keep your existing HTML demo pages accessible
   - Web Demos (Optional):
