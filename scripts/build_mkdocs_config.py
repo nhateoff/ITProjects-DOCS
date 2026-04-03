@@ -4,7 +4,7 @@ from pathlib import Path
 FLAGS_FILE = Path("feature-flags/flags.yml")
 NAV_V1 = Path("feature-flags/sidebar/nav_v1.yml")
 NAV_V2 = Path("feature-flags/sidebar/nav_v2.yml")
-OUT = Path("mkdocs.yml")
+OUT = Path("mkdocs.generated.yml")
 
 BASE = {
     "site_name": "ITProjects-DOCS",
