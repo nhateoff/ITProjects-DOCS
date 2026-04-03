@@ -80,7 +80,7 @@ wiki, github wiki, sidebar, footer, markdown, documentation, knowledge base, onb
 ---
 
 ## PDF
-- [PDF: IT Projects – Wiki pages](concepts/documentation_wikipages.pdf)
+- [PDF: IT Projects – Wiki pages](documentation_wikipages.pdf)
 
 ## Metadata
 - Owner: Nhat Tan Nguyen

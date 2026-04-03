@@ -61,7 +61,7 @@ centralized repository, single source of truth, governance, templates, style gui
 ---
 
 ## PDF
-- [PDF: IT Projects – Centralized Repository](concepts/documentation_centralizied_repository.pdf)
+- [PDF: IT Projects – Centralized Repository](documentation_centralizied_repository.pdf)
 
 ## Metadata
 - Owner: Nhat Tan Nguyen

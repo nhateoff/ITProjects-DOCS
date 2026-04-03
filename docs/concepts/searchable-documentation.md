@@ -47,7 +47,7 @@ searchable documentation, scannable, headings, h1 h2 h3, github search, qualifie
 ---
 
 ## PDF
-- [PDF: IT Projects – Searchable Documentation](concepts/documentation_searchable_documentation.pdf)
+- [PDF: IT Projects – Searchable Documentation](documentation_searchable_documentation.pdf)
 
 ## Metadata
 - Owner: Nhat Tan Nguyen

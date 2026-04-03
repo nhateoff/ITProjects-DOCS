@@ -1,0 +1,10 @@
+- Home: index.md
+
+- Guides:
+    - Create GitHub Wiki (Step-by-step): guides/guide_create_wiki.md
+
+- Concepts:
+    - Wiki Pages (GitHub): docs/concepts/wiki-pages.md
+    - Centralized Repository: docs/concepts/centralized-repo.md
+    - Searchable Documentation: docs/concepts/searchable-documentation.md
+    - Community Contribution Enabled: docs/concepts/community-contribution-enabled.md

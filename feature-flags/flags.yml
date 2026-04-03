@@ -1,0 +1,17 @@
+#Test Feauture-Flag
+flags:
+  - key: "wiki.sidebar.v2"
+    type: "boolean"
+    default: false
+    purpose: "Release flag: neue Sidebar-Struktur testen"
+    owner: "@nhateoff"
+    tags: ["release", "docs", "ui"]
+    environments:
+      dev:
+        enabled: true
+        rollout: 100
+      prod:
+        enabled: true
+        rollout: 10  # phased rollout (10% -> 25% -> 100%)
+    expires_on: "2026-05-31"
+    cleanup_plan: "Remove flag after rollout reaches 100% and stays stable for 2 weeks."
