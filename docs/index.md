@@ -8,12 +8,12 @@ Zentrale Dokumentationsbasis für IT-Themen (**Guides & Concepts**) – mit Foku
 ## Quick Links
 
 ### Guides
-- [Create GitHub Wiki (Step-by-step)](guides/guide_create_wiki/)
+- [Create GitHub Wiki (Step-by-step)](guides/guide_create_wiki.md)
 
 ### Concepts
-- [Wiki Pages (GitHub)](concepts/wiki-pages/)
-- [Centralized Repository](concepts/centralized-repository/)
-- [Searchable Documentation](concepts/searchable-documentation/)
+- [Wiki Pages (GitHub)](concepts/wiki-pages.md)
+- [Centralized Repository](concepts/centralized-repository.md)
+- [Searchable Documentation](concepts/searchable-documentation.md)
 
 ---
 
@@ -34,6 +34,16 @@ repo:nhateoff/ITProjects-DOCS "pg_restore:"
 repo:nhateoff/ITProjects-DOCS "error:"
 ```
 
-## Repository Standards
-- [CONTRIBUTING](CONTRIBUTING.md)
-- [STYLE_GUIDE](STYLE_GUIDE.md)
+# Contributing
+
+Diese Seite beschreibt, wie du zu ITProjects-DOCS beiträgst.
+
+Offizielle Regeln (im Repo):  
+- [CONTRIBUTING.md](https://github.com/nhateoff/ITProjects-DOCS/blob/main/CONTRIBUTING.md)
+
+# Style Guide
+
+Diese Seite beschreibt die Schreib- und Formatstandards für Dokumentation.
+
+Offizieller Guide (im Repo):  
+- [STYLE_GUIDE.md](https://github.com/nhateoff/ITProjects-DOCS/blob/main/STYLE_GUIDE.md)
