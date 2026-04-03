@@ -23,7 +23,7 @@ markdown_extensions:
   - tables
 
 nav:
-  - Home: index.html
+  - Home: index.md
 
   - Guides:
       - Create GitHub Wiki (Step-by-step): guides/guide_create_wiki.md
@@ -35,5 +35,5 @@ nav:
 
   # Optional: keep your existing HTML demo pages accessible
   - Web Demos (Optional):
-      - Demo Home (HTML): index.html
+      - Demo Home (HTML): index.md
       - Demo Example (HTML): example1.html
