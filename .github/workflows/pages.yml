@@ -27,11 +27,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install MkDocs
-        run: pip install mkdocs
+      - name: Install MkDocs + deps
+        run: pip install mkdocs pyyaml
+
+      - name: Generate mkdocs.yml from feature flags
+        run: python scripts/build_mkdocs_config.py
 
       - name: Build site
-        run: mkdocs build
+        run: mkdocs build --strict
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
