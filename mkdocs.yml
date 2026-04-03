@@ -32,6 +32,7 @@ nav:
       - Wiki Pages (GitHub): concepts/wiki-pages.md
       - Centralized Repository: concepts/centralized-repo.md
       - Searchable Documentation: concepts/searchable-documentation.md
+      - Community Contribution enabled: concepts/community-contribution-enabled.md
 
   # Optional: keep your existing HTML demo pages accessible
   - Web Demos (Optional):
