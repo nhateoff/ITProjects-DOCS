@@ -30,7 +30,7 @@ nav:
 
   - Concepts:
       - Wiki Pages (GitHub): docs/concepts/wiki-pages.md
-      - Centralized Repository: docs/concepts/centralized-repository.md
+      - Centralized Repository: docs/concepts/centralized-repo.md
       - Searchable Documentation: docs/concepts/searchable-documentation.md
 
   # Optional: keep your existing HTML demo pages accessible
