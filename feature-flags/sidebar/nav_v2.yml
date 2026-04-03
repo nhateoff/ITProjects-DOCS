@@ -1,21 +1,10 @@
-- Home:
-    - Home: index.md
+- Home: index.md
 
-- Grundlagen:
-    - Was ist ein Wiki?: concepts/was-ist-ein-wiki.md
-    - Wiki vs. README vs. Pages: concepts/wiki-vs-readme-vs-pages.md
-    - Ideale Wiki-Struktur (Seitenliste): concepts/ideale-wiki-struktur.md
+- Guides:
+    - Create GitHub Wiki (Step-by-step): guides/guide_create_wiki.md
 
-- Standards & Templates:
-    - Ideale Struktur einer Wiki-Page: concepts/ideale-struktur-einer-wiki-page.md
-    - Seiten-Templates: concepts/seiten-templates.md
-    - Naming & Konventionen: concepts/naming-und-konventionen.md
-
-- Pflege & Qualität:
-    - Best Practices & Pflege: concepts/best-practices-und-pflege.md
-    - Review-Zyklus: concepts/review-zyklus.md
-    - FAQ: concepts/faq.md
-
-- Anhänge:
-    - Changelog: concepts/changelog.md
-    - Roadmap: concepts/roadmap.md
+- Concepts:
+    - Wiki Pages (GitHub): concepts/wiki-pages.md
+    - Centralized Repository: concepts/centralized-repo.md
+    - Searchable Documentation: concepts/searchable-documentation.md
+    - Community Contribution Enabled: concepts/community-contribution-enabled.md
