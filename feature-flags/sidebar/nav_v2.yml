@@ -11,7 +11,7 @@
     - Searchable Documentation: concepts/searchable-documentation.md
     - Community Contribution Enabled: concepts/community-contribution-enabled.md
 
-    - Deployment Strategies — Feature Flags: concepts/feature-flags.md
+    - Deployment Strategies — Feature Flags: concepts/flag-features.md
     - Deployment Strategies — Rollback Capabilities: concepts/rollback-capabilities.md
     - Deployment Strategies — Phased Deployment: concepts/phased-deployment-approaches.md
 
