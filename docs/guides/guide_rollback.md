@@ -1,5 +1,5 @@
-# Anleitung: Wie bediene ich einen Rollback im Falle eine Unregelmässigkeit
-Das hier ist eine kurze step by step Anleitung, um korrekt zur stable-version bzw. zum bisherigen "Last good known" zurückzukehren
+# Anleitung: Wie bediene ich einen Rollback, wenn die MkDocs korrupt ist?
+Das hier ist eine kurze step by step Anleitung, um korrekt zur stable-version bzw. zum bisherigen "Last good known" zurückzukehren. 
 
 ## Step 1
 Jedes erstellte Repo wird standardmässig keine Wiki haben. Deshalb muss dies in den Einstellungen aktiviert werden.
