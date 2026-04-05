@@ -27,6 +27,7 @@ nav:
 
   - Guides:
       - Create GitHub Wiki (Step-by-step): guides/guide_create_wiki.md
+      - Rollback MkDocs (Step-by-step): guides/guide_rollback_mkdocs.md
 
   - Concepts:
       - Wiki Pages (GitHub): concepts/wiki-pages.md
