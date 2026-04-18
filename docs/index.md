@@ -1,7 +1,7 @@
 # ITProjects-DOCS
 
 Zentrale Dokumentationsbasis für IT-Themen (**Guides & Concepts**) – mit Fokus auf **Searchability**.  
-**Owner:** Nhat Tan Nguyen
+**Owner:** @nhateoff
 
 ---
 
