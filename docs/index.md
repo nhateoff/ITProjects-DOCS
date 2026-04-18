@@ -8,12 +8,12 @@ Zentrale Dokumentationsbasis für IT-Themen (**Guides & Concepts**) – mit Foku
 ## Quick Links
 
 ### Guides
-- [Create GitHub Wiki (Step-by-step)](guides/guide_create_wiki.md)
+- [Create GitHub Wiki (Step-by-step)](guides/guide_create_wiki)
 
 ### Concepts
-- [Wiki Pages (GitHub)](concepts/wiki-pages.md)
-- [Centralized Repository](concepts/centralized-repo.md)
-- [Searchable Documentation](concepts/searchable-documentation.md)
+- [Wiki Pages (GitHub)](concepts/wiki-pages)
+- [Centralized Repository](concepts/centralized-repo)
+- [Searchable Documentation](concepts/searchable-documentation)
 
 ---
 
