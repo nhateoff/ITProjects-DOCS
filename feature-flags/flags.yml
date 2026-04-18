@@ -8,10 +8,10 @@ flags:
     tags: ["release", "docs", "ui"]
     environments:
       dev:
-        enabled: true
-        rollout: 100
-      prod:
         enabled: false
-        rollout: 0  # phased rollout (10% -> 25% -> 100%)
+        rollout: 0
+      prod:
+        enabled: true
+        rollout: 10  # phased rollout (10% -> 25% -> 100%)
     expires_on: "2026-05-31"
     cleanup_plan: "Remove flag after rollout reaches 100% and stays stable for 2 weeks."
