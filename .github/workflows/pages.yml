@@ -33,6 +33,11 @@ jobs:
       - name: Generate mkdocs.yml from feature flags
         run: python scripts/build_mkdocs_config.py
 
+      - name: Debug generated config
+        run: |
+          echo "=== mkdocs.generated.yml ==="
+          sed -n '1,200p' mkdocs.generated.yml
+
       - name: Build site
         run: mkdocs build --strict -f mkdocs.generated.yml
 
