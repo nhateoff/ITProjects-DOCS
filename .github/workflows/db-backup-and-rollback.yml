@@ -1,0 +1,115 @@
+name: DB Backup (Artifact) + Rollback (Restore)
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "choose: backup | restore"
+        required: true
+        default: "backup"
+      db_type:
+        description: "postgres | mariadb"
+        required: true
+        default: "postgres"
+
+permissions:
+  contents: read
+
+jobs:
+  db:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          if [ "${{ inputs.db_type }}" = "postgres" ]; then
+            sudo apt-get install -y postgresql-client gzip
+          else
+            sudo apt-get install -y mariadb-client gzip
+          fi
+
+      # ---------- BACKUP ----------
+      - name: Create backup
+        if: ${{ inputs.action == 'backup' }}
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          TS=$(date -u +"%Y%m%d-%H%M%S")
+          mkdir -p artifacts
+          if [ "${{ inputs.db_type }}" = "postgres" ]; then
+            export PGPASSWORD="$DB_PASSWORD"
+            pg_dump -h "$DB_HOST" -p "$DB_PORT" -U "$DB_USER" "$DB_NAME" | gzip > "artifacts/db-backup-$TS.sql.gz"
+          else
+            mysqldump -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" | gzip > "artifacts/db-backup-$TS.sql.gz"
+          fi
+
+          sha256sum "artifacts/db-backup-$TS.sql.gz" > "artifacts/db-backup-$TS.sha256"
+          echo "$TS" > "artifacts/backup-timestamp.txt"
+
+      - name: Upload backup artifact
+        if: ${{ inputs.action == 'backup' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: db-backup
+          path: artifacts/
+
+      # ---------- RESTORE (Rollback) ----------
+      - name: Download backup artifact
+        if: ${{ inputs.action == 'restore' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: db-backup
+          path: artifacts/
+
+      - name: Restore DB from backup
+        if: ${{ inputs.action == 'restore' }}
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          ls -la artifacts
+          FILE=$(ls artifacts/db-backup-*.sql.gz | sort | tail -n 1)
+
+          echo "Restoring from: $FILE"
+          sha256sum -c artifacts/db-backup-*.sha256 || true
+
+          if [ "${{ inputs.db_type }}" = "postgres" ]; then
+            export PGPASSWORD="$DB_PASSWORD"
+            gunzip -c "$FILE" | psql -h "$DB_HOST" -p "$DB_PORT" -U "$DB_USER" -d "$DB_NAME"
+          else
+            gunzip -c "$FILE" | mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME"
+          fi
+
+      - name: Verify (simple health check)
+        if: ${{ inputs.action == 'restore' }}
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          mkdir -p artifacts
+          if [ "${{ inputs.db_type }}" = "postgres" ]; then
+            export PGPASSWORD="$DB_PASSWORD"
+            psql -h "$DB_HOST" -p "$DB_PORT" -U "$DB_USER" -d "$DB_NAME" -c "SELECT now();" | tee artifacts/healthcheck-output.txt
+          else
+            mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" -e "SELECT NOW();" | tee artifacts/healthcheck-output.txt
+          fi
+
+      - name: Upload restore verification artifact
+        if: ${{ inputs.action == 'restore' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: db-restore-verify
+          path: artifacts/
