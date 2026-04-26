@@ -14,6 +14,13 @@ Rollback Capabilities bedeuten: Von einem schlechten Deploy schnell auf einen **
 - **Deployment History** hilft, zu sehen, welche Version wann deployed wurde.
 - Empfohlen ist ein **Rollback-Workflow**, der eine bestimmte Version (Tag oder Commit SHA) erneut deployt.
 
+### 3) Rollback via Feature Flags / Kill Switch (Runtime)
+- Wenn ein neues Feature Probleme macht, wird es sofort deaktiviert, ohne neuen Deploy. Dies ist schnell, und reduziert Impact sofort
+
+### 4) Rollback auf Datenbank-/Daten-Ebene (Schema & Data)
+- Wenn ein Deploy DB-Änderungen oder Daten korrumpiert, reicht ein Code-Rollback nicht
+- Rollback Optionen: Backup/Restore, Rollback/Down-Migration, Forward Fix
+
 ## Praktisches Rollback-Setup
 1. **Last Known Good definieren**
    - Stabile Version festlegen
